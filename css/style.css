@@ -8664,29 +8664,9 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* banner */
 
-
-
 .banner-item {
-    display: flex;
-    flex-direction: column;
     position: relative;
     overflow: hidden;
     max-width: 100%;
@@ -8694,9 +8674,15 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     height: 70vh;
 }
 
+.banner-image {
+    width: 100%;
+    height: 100%;
+}
+
 .banner-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -8706,14 +8692,18 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 
 .banner-details {
     position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: #222222;
-    /* background-color: rgba(0, 0, 0, 0.6); */
     padding: 20px;
-    transition: opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .banner-details h3 {
@@ -8730,12 +8720,10 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     line-height: 1.7;
 }
 
-
 .shop-button {
     display: inline-block;
     padding: 10px 20px;
-    border: 1px  solid #222222;
-    /* background-color: #ffffff; */
+    border: 1px solid #222222;
     color: #222222;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -8748,12 +8736,12 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 
 @media (max-width: 768px) {
     .banner-details {
-        right: 5%;
-        padding: 10px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .banner-details h3 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .banner-details p {
@@ -8766,6 +8754,20 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     }
 }
 
+@media (max-width: 480px) {
+    .banner-details h3 {
+        font-size: 18px;
+    }
+
+    .banner-details p {
+        font-size: 10px;
+    }
+
+    .shop-button {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
 
 /* whychooseus */
 .containerchoose {
@@ -8836,7 +8838,6 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 
 
 /* slider......... */
-
 .slide-sellers {
     display: flex;
     justify-content: center;
@@ -8849,12 +8850,13 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 .swiper-container {
     overflow: hidden;
     width: 100%;
-    height: 100%; 
-    position: relative; 
+    height: auto;
+    position: relative;
 }
 
 .swiper-wrapper {
     display: flex;
+    align-items: stretch;
 }
 
 .border-slider {
@@ -8864,51 +8866,60 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 .slide-content {
     display: flex;
     justify-content: center;
+    /* align-items: center; */
+    /* padding-bottom: 40px; */
+    align-items: stretch;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    text-align: center;
+    font-size: 18px;
     /* height: 100%; */
+    /* width: auto; */
+    /* padding: 1rem; */
+    height: auto;
+    width: auto;
+    padding: 10px;
+
 }
 
 .slide-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1.25rem;
     margin: 0.75rem;
-    width: 380px;
-    height: 400px;
+    width: 100%;
+    max-width: 380px;
+    height: 100%;
     cursor: pointer;
 }
 
 .img-container {
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.swiper-slide img {
-    display: block;
+.img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .swiper-pagination {
     position: absolute;
     text-align: center;
-    transition: .3s opacity;
+    transition: 0.3s opacity;
     transform: translate3d(0, 0, 0);
     z-index: 10;
     left: 0;
@@ -8928,7 +8939,6 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     bottom: -20px;
 }
 
-
 .swiper-container .swiper-pagination-bullet-active {
     background-color: black;
 }
@@ -8937,7 +8947,22 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 .swiper-container .swiper-button-next {
     color: black !important;
 }
- 
+
+
+
+@media (max-width: 600px) {
+    .slide-inner {
+        max-width: 200px;
+    }
+
+    .slide-sellers {
+        font-size: 24px;
+        /* padding: 0.75rem; */
+    }
+}
+
+
+
 
 
 /* cards here */
@@ -8948,12 +8973,13 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 30px;
+    gap: 10px;
+    padding: 6px;
 }
 
 .product {
-    width: 270px;
+    width: 100%;
     text-align: center;
-    margin: 10px;
     padding: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -8976,7 +9002,6 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     padding: 2px 5px;
     font-size: 12px;
     position: absolute;
-
 }
 
 .product-name {
@@ -8987,4 +9012,22 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 .product-description {
     font-size: 14px;
     color: #666;
+}
+
+@media (max-width: 1200px) {
+    .container-product {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .container-product {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container-product {
+        grid-template-columns: 1fr;
+    }
 }
