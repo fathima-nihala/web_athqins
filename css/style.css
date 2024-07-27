@@ -8976,7 +8976,9 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     gap: 10px;
     padding: 6px;
 }
-
+.container-product a{
+    text-decoration: none;
+}
 .product {
     width: 100%;
     text-align: center;
