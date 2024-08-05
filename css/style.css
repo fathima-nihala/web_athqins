@@ -2660,6 +2660,8 @@ a.pxp-areas-carousel-item:hover .pxp-areas-carousel-item-fig {
     position: relative;
     overflow: hidden;
     height: 400px;
+    /* width:100%; */
+    /* width:400px; */
 }
 
 .pxp-prop-card-1-fig {
@@ -2671,6 +2673,7 @@ a.pxp-areas-carousel-item:hover .pxp-areas-carousel-item-fig {
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
+    /* width: 100%; */
 }
 
 .pxp-prop-card-1:hover .pxp-prop-card-1-fig {
@@ -3328,6 +3331,7 @@ a.pxp-areas-carousel-item:hover .pxp-areas-carousel-item-fig {
 
 .pxp-services-c-container .owl-item.active {
     opacity: 1;
+    /* width: 100%; */
 }
 
 .pxp-services-c-container .owl-carousel .owl-nav button {
@@ -3389,6 +3393,7 @@ a.pxp-areas-carousel-item:hover .pxp-areas-carousel-item-fig {
 .pxp-testim-1-intro {
     margin-right: 30px;
     width: 25%;
+    /* width: 100%; */
     z-index: 2;
     margin-top: -84px;
 }
@@ -4383,7 +4388,8 @@ a.pxp-results-card-1 .carousel-inner>.carousel-item {
 .pxp-results-card-1 .carousel-control-next {
     z-index: 4;
     opacity: 1;
-    width: 53px;
+    /* width: 53px; */
+    width: 100%;
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -5881,6 +5887,7 @@ ul.pxp-agent-social>li>a:hover {
 
 .pxp-agents .pxp-prop-card-1 {
     margin-bottom: 30px;
+    
 }
 
 .pxp-single-agent-rating {
