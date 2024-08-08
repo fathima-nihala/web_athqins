@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.banners) {
                     const { heading1, heading2, heading3, heading4, image1, image2, image3, image4, price1, price2, price3, price4, subheading1, subheading2, subheading3, subheading4, subimage1, subimage2, subimage3, subimage4 } = data.banners[0];
                     console.log(data, 'fetchhero');
+                    console.log(price1, price2, price3, price4);
 
                     heroDetails.innerHTML = `
                      <ol class="carousel-indicators container">
